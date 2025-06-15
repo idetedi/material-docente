@@ -9,3 +9,6 @@ El repositorio se organiza de la siguiente forma:
 - El directorio `transparencias` contiene las transparencias del temario de la asignatura en formato Markdown.
 - El directorio `ejercicios` contiene los ejercicios en formato LaTeX.
 - El directorio `examenes` contiene exámenes de otros años para las asignaturas de Bases de Datos de los diferentes grados de la escuela.
+
+
+CUIDADO! QUE ESTE ES EL FORK!
