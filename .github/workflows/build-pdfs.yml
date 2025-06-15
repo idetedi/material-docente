@@ -100,5 +100,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: ./build/
+          folder: build
+          target-folder: ./
           clean-exclude: pr-preview/
+
