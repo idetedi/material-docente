@@ -82,11 +82,12 @@ jobs:
           <body>
             <h1>📚 Apuntes de Bases de Datos</h1>' > build/index.html
       
-          for file in $(find build/$dir -type f \( -name "*.pdf" -o -name "*.html" \) | sort); do
+          find build/$dir -type f \( -name "*.pdf" -o -name "*.html" \) -print0 | sort -z | while IFS= read -r -d '' file; do
             name=$(basename "$file")
-            path="${file#build/}"  # Elimina el prefijo "build/"
+            path="${file#build/}"
             echo "<li><a href=\"$path\">$name</a></li>" >> build/index.html
           done
+
 
       
           echo '</body></html>' >> build/index.html
