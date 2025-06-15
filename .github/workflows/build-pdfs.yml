@@ -49,6 +49,7 @@ jobs:
           working_directory: examenes
           continue_on_error: true
           latexmk_shell_escape: true
+        continue-on-error: true
 
       - name: Copy pdf files
         run: |
