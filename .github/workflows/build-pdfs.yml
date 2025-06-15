@@ -63,6 +63,37 @@ jobs:
           source-dir: ./build/
           preview-branch: gh-pages
           umbrella-dir: pr-preview
+      - name: Generate index.html
+        run: |
+          echo '<!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8">
+            <title>Apuntes BBDD</title>
+            <style>
+              body { font-family: sans-serif; padding: 2em; }
+              h1 { color: #444; }
+              ul { list-style-type: none; padding-left: 0; }
+              li { margin: 0.5em 0; }
+              a { text-decoration: none; color: #007acc; }
+              a:hover { text-decoration: underline; }
+            </style>
+          </head>
+          <body>
+            <h1>📚 Apuntes de Bases de Datos</h1>' > build/index.html
+      
+          for dir in ejercicios examenes transparencias; do
+            if [ -d build/$dir ]; then
+              echo "<h2>📂 $dir</h2><ul>" >> build/index.html
+              for file in $(find build/$dir -type f \( -name "*.pdf" -o -name "*.html" \) | sort); do
+                name=$(basename "$file")
+                echo "<li><a href=\"$file\">$name</a></li>" >> build/index.html
+              done
+              echo "</ul>" >> build/index.html
+            fi
+          done
+      
+          echo '</body></html>' >> build/index.html
 
       - name: Deploy production
         if: ${{ github.event_name == 'push' }}
