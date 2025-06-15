@@ -82,16 +82,12 @@ jobs:
           <body>
             <h1>📚 Apuntes de Bases de Datos</h1>' > build/index.html
       
-          for dir in ejercicios examenes transparencias; do
-            if [ -d build/$dir ]; then
-              echo "<h2>📂 $dir</h2><ul>" >> build/index.html
-              for file in $(find build/$dir -type f \( -name "*.pdf" -o -name "*.html" \) | sort); do
-                name=$(basename "$file")
-                echo "<li><a href=\"$file\">$name</a></li>" >> build/index.html
-              done
-              echo "</ul>" >> build/index.html
-            fi
+          for file in $(find build/$dir -type f \( -name "*.pdf" -o -name "*.html" \) | sort); do
+            name=$(basename "$file")
+            path="${file#build/}"  # Elimina el prefijo "build/"
+            echo "<li><a href=\"$path\">$name</a></li>" >> build/index.html
           done
+
       
           echo '</body></html>' >> build/index.html
 
@@ -100,7 +96,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build
-          target-folder: ./
+          folder: ./build/
           clean-exclude: pr-preview/
+
 
