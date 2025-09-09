@@ -1,18 +1,18 @@
 ---
 marp        : true
-title       : Presentación de la asignatura Bases de Datos. Curso 2024-2025.
+title       : Presentación de la asignatura Bases de Datos. Curso 2056-2026.
 paginate    : true
 theme       : bbdd
-header      : Presentación de la asignatura Bases de Datos. Curso 2024-2025.
+header      : Presentación de la asignatura Bases de Datos. Curso 2025-2026.
 description : >
-  Presentación de la asignatura Bases de Datos. Curso 2024-2025.
+  Presentación de la asignatura Bases de Datos. Curso 2025-2026.
   E.T.S.I. Sistemas Informáticos.
   Universidad Politécnica de Madrid
 ---
 
 # Presentación de la asignatura
 
-## Bases de datos - Curso 2024-2025
+## Bases de datos - Curso 2025-2026
 
 ### Departamento de Sistemas Informáticos
 
@@ -40,9 +40,9 @@ La asignatura ha sido diseñada con un elevado contenido práctico, de tal maner
 
 - Santiago Alonso. santiago.alonso@upm.es. *Despacho 1125*.
 - Gema Bello. gema.borgaz@upm.es. *Despacho 1224*.
-- Félix Fuentes. felix.fuentes@upm.es. *Despacho 4305*.
+- Raul Lara. raul.lara@upm.es. *Despacho 1230*.
 - María Ángeles Mahillo. mariaangeles.mahillo@upm.es. *Despacho 1112*.
-- Fernando Ortega (**Coordinador**). fernando.ortega@upm.es. *Despacho 1111*.
+- Fernando Ortega (**Coordinador**). fernando.ortega@upm.es. *Despacho 1110*.
 - Edgar Talavera. e.talavera@upm.es. *Despacho 1222*.
 
 ---
@@ -104,12 +104,11 @@ Identifica las estructuras y problemas derivados de la integridad referencial en
 
 | Grupo   | L     | M     | X     | J     | V     |
 | ------- | ----- | ----- | ----- | ----- | ----- |
-| IWSIM21 |       | 9-11  | 9-11  |       | 13-15 |
-| IWSIM22 |       | 11-13 | 9-11  | 9-11  |       |
-| IWSIT21 | 19-21 | 17-19 |       | 15-17 |       |
-| IWSIT22 | 17-19 | 15-17 |       | 17-19 |       |
-| CITIM21 |       |       | 11-13 | 11-13 | 9-11  |
-| CITIT21 |       | 15-17 | 19-21 | 17-19 |       |
+| IWSIM21 |       | 9-11  | 13-15 |       | 11-13 |
+| IWSIM22 |       | 11-13 | 11-13 | 9-11  |       |
+| IWSIT21 | 17-19 | 15-17 |       | 19-21 |       |
+| CITIM21 |       |       | 9-11  | 9-11  | 9-11  |
+| CITIT21 |       | 17-19 | 17-19 | 15-17 |       |
 
 ---
 
@@ -125,11 +124,13 @@ El sistema de evaluación es idéntico tanto en sistema de evaluación progresiv
 Examen final (50%)
 - Nota mínima de 4
 - Todo el temario
-- Miércoles 15 de enero de 2025 a las 18:00
+- Viernes 23 de enero de 2026 a las 15:00
 
-Prácticas (50%)
+Prácticas
 - En equipos (del mismo grupo de matrícula)
-- Evaluación en el aula durante la última semana del curso
+- Evaluación oral en el aula durante la última semana del curso (40%)
+- Evaluación escrita durante el examen final (10%)
+  - Nota mínima de 3
 
 
 Será necesario alcanzar una nota total mayor o igual 5 para aprobar la asignatura.
@@ -141,7 +142,7 @@ Será necesario alcanzar una nota total mayor o igual 5 para aprobar la asignatu
 
 # Evaluación convocatoria extraordinaria
 
-Prueba escrita el **viernes 27 de junio de 2025 a las 15:00** incluyendo preguntas teórico-prácticas de todo el temario de la asignatura.
+Prueba escrita el **viernes 26 de junio de 2026 a las 15:00** incluyendo preguntas teórico-prácticas de todo el temario de la asignatura.
 
 Es obligatorio alcanzar una nota mínima de 5 puntos sobre 10.
 
