@@ -44,8 +44,15 @@ cp ejercicios/*.pdf build/ejercicios/
 cat <<'EOF_HTML' > build/index.html
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8"><title>Apuntes BBDD</title></head>
-<body><h1>📚 Apuntes de Bases de Datos</h1><ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apuntes BBDD</title>
+  <link rel="stylesheet" href="transparencias/styles/bbdd.css">
+</head>
+<body>
+  <h1>📚 Apuntes de Bases de Datos</h1>
+  <ul>
 EOF_HTML
 
 find build -type f \( -name "*.pdf" -o -name "*.html" \) -not -name index.html | sort | while read file; do
