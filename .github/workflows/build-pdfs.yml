@@ -81,15 +81,15 @@ jobs:
           </head>
           <body>
             <h1>📚 Apuntes de Bases de Datos</h1>' > build/index.html
-      
-          find build/$dir -type f \( -name "*.pdf" -o -name "*.html" \) -print0 | sort -z | while IFS= read -r -d '' file; do
+          echo '<ul>' >> build/index.html
+
+          find build -type f \( -name "*.pdf" -o -name "*.html" \) -not -name index.html -print0 | sort -z | while IFS= read -r -d '' file; do
             name=$(basename "$file")
             path="${file#build/}"
             echo "<li><a href=\"$path\">$name</a></li>" >> build/index.html
           done
+          echo '</ul>' >> build/index.html
 
-
-      
           echo '</body></html>' >> build/index.html
 
       - name: Deploy production
