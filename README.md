@@ -53,17 +53,22 @@ cat <<'EOF_HTML' > build/index.html
 </head>
 <body>
   <h1>📚 Apuntes de Bases de Datos</h1>
-  <ul>
 EOF_HTML
 
-find build -type f \( -name "*.pdf" -o -name "*.html" \) -not -name index.html | sort | while read file; do
-  name=$(basename "$file")
-  path="${file#build/}"
-  echo "<li><a href=\"$path\">$name</a></li>" >> build/index.html
+for dir in build/*/; do
+  section=$(basename "$dir")
+  echo "  <h2>${section^}</h2>" >> build/index.html
+  echo "  <ul>" >> build/index.html
+  for file in $(find "$dir" -type f \( -name "*.pdf" -o -name "*.html" \) | sort); do
+    name=$(basename "$file")
+    path="${file#build/}"
+    echo "    <li><a href="$path">$name</a></li>" >> build/index.html
+  done
+  echo "  </ul>" >> build/index.html
 done
 
 cat <<'EOF_HTML' >> build/index.html
-</ul></body></html>
+</body></html>
 EOF_HTML
 ```
 
