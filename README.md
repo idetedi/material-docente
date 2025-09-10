@@ -61,6 +61,8 @@ for dir in build/*/; do
   echo "  <ul>" >> build/index.html
   for file in $(find "$dir" -type f \( -name "*.pdf" -o -name "*.html" \) | sort); do
     name=$(basename "$file")
+    name="${name%.*}"
+    name="${name//[-_]/ }"
     path="${file#build/}"
     echo "    <li><a href="$path">$name</a></li>" >> build/index.html
   done
